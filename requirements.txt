@@ -1,0 +1,7 @@
+pillow
+python 3
+mysql_connector
+mysql server
+tkinter
+opencv-python
+opencv-contrib-python
