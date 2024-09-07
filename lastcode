@@ -1,0 +1,353 @@
+# from tkinter import *
+# from PIL import Image, ImageTk
+
+# class Face_Recognition_System:
+#     def __init__(self, root):
+#         self.root = root
+#         self.root.geometry("1530x790+0+0")
+#         self.root.title("Face Recognition System")
+
+#         # Load and set the images
+#         self.setup_images()
+
+#         # Setup UI components
+#         self.setup_ui()
+
+#     def setup_images(self):
+#         # Image paths
+#         image_path = "./images/theimg.jpg"
+
+#         # Top images
+#         self.img1 = Image.open(image_path)
+#         self.img1 = self.img1.resize((500, 130), Image.LANCZOS)
+#         self.photoimg1 = ImageTk.PhotoImage(self.img1)
+
+#         self.img2 = Image.open(image_path)
+#         self.img2 = self.img2.resize((500, 130), Image.LANCZOS)
+#         self.photoimg2 = ImageTk.PhotoImage(self.img2)
+
+#         self.img3 = Image.open(image_path)
+#         self.img3 = self.img3.resize((500, 130), Image.LANCZOS)
+#         self.photoimg3 = ImageTk.PhotoImage(self.img3)
+
+#         # Background image
+#         self.bg_image = Image.open(image_path)
+#         self.bg_image = self.bg_image.resize((1530, 790), Image.LANCZOS)
+#         self.photo_bg = ImageTk.PhotoImage(self.bg_image)
+
+#         # Button image
+#         self.img4 = Image.open("./images/students.jpg")
+#         self.img4 = self.img4.resize((220, 220), Image.LANCZOS)  # Resize to fit button
+#         self.photoimg4 = ImageTk.PhotoImage(self.img4)
+
+#         self.img5 = Image.open("./images/face.jpg")
+#         self.img5 = self.img5.resize((220, 220), Image.LANCZOS)  # Resize to fit button
+#         self.photoimg5 = ImageTk.PhotoImage(self.img5)
+
+# # Attendance image
+#         self.img6 = Image.open("./images/attendance.jpg")
+#         self.img6 = self.img6.resize((220, 220), Image.LANCZOS)  # Resize to fit button
+#         self.photoimg6 = ImageTk.PhotoImage(self.img6)
+
+# # help image
+#         self.img7 = Image.open("./images/help.jpg")
+#         self.img7 = self.img7.resize((220, 220), Image.LANCZOS)  # Resize to fit button
+#         self.photoimg7 = ImageTk.PhotoImage(self.img7)
+
+# # TRin Model on the image
+#         self.img8 = Image.open("./images/ai.jpg")
+#         self.img8 = self.img8.resize((220, 220), Image.LANCZOS)  # Resize to fit button
+#         self.photoimg8 = ImageTk.PhotoImage(self.img8)
+
+# # photos
+#         self.img9 = Image.open("./images/photos.jpg")
+#         self.img9 = self.img9.resize((220, 220), Image.LANCZOS)  # Resize to fit button
+#         self.photoimg9 = ImageTk.PhotoImage(self.img9)        
+
+# # Developers
+#         self.img10 = Image.open("./images/developers.jpg")
+#         self.img10 = self.img10.resize((220, 220), Image.LANCZOS)  # Resize to fit button
+#         self.photoimg10 = ImageTk.PhotoImage(self.img10)        
+
+
+
+# # Exit
+#         self.img11 = Image.open("./images/exit.jpg")
+#         self.img11 = self.img11.resize((220, 220), Image.LANCZOS)  # Resize to fit button
+#         self.photoimg11 = ImageTk.PhotoImage(self.img11)    
+
+#     def setup_ui(self):
+#         # Top images
+#         Label(self.root, image=self.photoimg1).place(x=0, y=0, width=500, height=130)
+#         Label(self.root, image=self.photoimg2).place(x=500, y=0, width=500, height=130)
+#         Label(self.root, image=self.photoimg3).place(x=1000, y=0, width=530, height=130)
+
+#         # Background image
+#         background_label = Label(self.root, image=self.photo_bg)
+#         background_label.place(x=0, y=0, width=1530, height=790)
+
+#         # Title label
+#         title_lbl = Label(background_label, text="FACE RECOGNITION ATTENDANCE SYSTEM SOFTWARE", font=("Times New Roman", 35, "bold"), bg="white", fg="red")
+#         title_lbl.place(x=0, y=0, width=1530, height=45)
+
+#         # Students Button
+#         b1 = Button(background_label, image=self.photoimg4, cursor="hand2")
+#         b1.place(x=200, y=100, width=220, height=220)
+
+#         b1_1 = Button(background_label, text="Student Details", cursor="hand2", font=("Times New Roman", 15, "bold"), bg="darkblue", fg="red")
+#         b1_1.place(x=200, y=200, width=220, height=40)
+
+
+#                 # Detect face
+#         b1 = Button(background_label, image=self.photoimg5, cursor="hand2")
+#         b1.place(x=500, y=100, width=220, height=220)
+
+#         b1_1 = Button(background_label, text="Face Detector", cursor="hand2", font=("Times New Roman", 15, "bold"), bg="darkblue", fg="red")
+#         b1_1.place(x=500, y=300, width=220, height=40)
+
+#         #   Attendance              
+#         b1 = Button(background_label, image=self.photoimg6, cursor="hand2")
+#         b1.place(x=800, y=100, width=220, height=220)
+
+#         b1_1 = Button(background_label, text="Attendance", cursor="hand2", font=("Times New Roman", 15, "bold"), bg="darkblue", fg="red")
+#         b1_1.place(x=800, y=300, width=220, height=40)
+
+#         #   Help              
+#         b1 = Button(background_label, image=self.photoimg7, cursor="hand2")
+#         b1.place(x=1100, y=100, width=220, height=220)
+
+#         b1_1 = Button(background_label, text="Help Menu", cursor="hand2", font=("Times New Roman", 15, "bold"), bg="darkblue", fg="red")
+#         b1_1.place(x=1100, y=300, width=220, height=40)
+
+#         #   Train the model on the captured faces             
+#         b1 = Button(background_label, image=self.photoimg8, cursor="hand2")
+#         b1.place(x=200, y=380, width=220, height=220)
+
+#         b1_1 = Button(background_label, text="Train Model", cursor="hand2", font=("Times New Roman", 15, "bold"), bg="darkblue", fg="red")
+#         b1_1.place(x=200, y=580, width=220, height=40)
+
+#          #   Photos on the captured faces             
+#         b1 = Button(background_label, image=self.photoimg9, cursor="hand2")
+#         b1.place(x=500, y=380, width=220, height=220)
+
+#         b1_1 = Button(background_label, text="Photos", cursor="hand2", font=("Times New Roman", 15, "bold"), bg="darkblue", fg="red")
+#         b1_1.place(x=500, y=580, width=220, height=40)
+        
+#         #   About the developer            
+#         b1 = Button(background_label, image=self.photoimg10, cursor="hand2")
+#         b1.place(x=800, y=380, width=220, height=220)
+
+#         b1_1 = Button(background_label, text="Developers", cursor="hand2", font=("Times New Roman", 15, "bold"), bg="darkblue", fg="red")
+#         b1_1.place(x=800, y=580, width=220, height=40)
+
+        
+#                 # Exit the App           
+#         b1 = Button(background_label, image=self.photoimg11, cursor="hand2")
+#         b1.place(x=1100, y=380, width=220, height=220)
+
+#         b1_1 = Button(background_label, text="Exit", cursor="hand2", font=("Times New Roman", 15, "bold"), bg="darkblue", fg="red")
+#         b1_1.place(x=1100, y=580, width=220, height=40)
+
+
+
+# if __name__ == "__main__":
+#     root = Tk()
+#     app = Face_Recognition_System(root)
+#     root.mainloop()
+
+
+
+
+
+
+#      def add_data(self):
+#         # Check if all required fields are filled
+#         if (self.var_dep.get().strip() == "Select Department" or
+#             self.var_std_name.get().strip() == "" or
+#             self.var_std_id.get().strip() == "" or
+#             self.var_dob.get().strip() == "" or
+#             self.var_email.get().strip() == "" or
+#             self.var_phone.get().strip() == "" or
+#             self.var_address.get().strip() == "" or
+#             self.var_teacher.get().strip() == ""):
+            
+#             messagebox.showerror("Error", "All fields are required", parent=self.root)
+#         else:
+#             try:
+#                 conn = mysql.connector.connect(
+#                     host="localhost",
+#                     username="root",
+#                     password="@Engotiis123",
+#                     database="Desktop_face_recognition"
+#                 )
+#                 my_cursor = conn.cursor()
+
+#                 photo_status = self.var_radio1.get() if self.var_radio1.get() in ["yes", "No"] else None
+                
+#                 my_cursor.execute(
+#                     "INSERT INTO students (name, department, course, year, semester, roll_no, gender, dob, email, phone, address, teacher, photo, division) "
+#                     "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+#                     (
+#                         self.var_std_name.get().strip(),
+#                         self.var_dep.get().strip(),
+#                         self.var_course.get().strip(),
+#                         self.var_year.get().strip(),
+#                         self.var_semister.get().strip(),
+#                         self.var_roll.get().strip(),
+#                         self.var_gender.get().strip(),
+#                         self.var_dob.get().strip(),
+#                         self.var_email.get().strip(),
+#                         self.var_phone.get().strip(),
+#                         self.var_address.get().strip(),
+#                         self.var_teacher.get().strip(),
+#                         photo_status,
+#                         self.var_div.get().strip()
+#                     )
+#                 )
+#                 conn.commit()
+#                 conn.close()
+#                 messagebox.showinfo("Success", "Student Details Added Successfully", parent=self.root)
+#             except mysql.connector.Error as err:
+#                 messagebox.showerror("Error", f"Database Error: {err}", parent=self.root)
+#             except Exception as es:
+#                 messagebox.showerror("Error", f"Error: {str(es)}", parent=self.root)
+
+# from tkinter import *
+# from PIL import Image, ImageTk
+# from students import Student
+# import os
+
+# class Face_Recognition_System:
+#     def __init__(self, root):
+#         self.root = root
+#         self.root.geometry("1530x790+0+0")
+#         self.root.title("Face Recognition System")
+
+#         # Load and set the images
+#         self.setup_images()
+
+#         # Setup UI components
+#         self.setup_ui()
+
+#     def setup_images(self):
+#         # Image paths
+#         image_path = "./images/theimg.jpg"
+
+#         # Top images
+#         self.img1 = Image.open(image_path)
+#         self.img1 = self.img1.resize((500, 130), Image.LANCZOS)
+#         self.photoimg1 = ImageTk.PhotoImage(self.img1)
+
+#         self.img2 = Image.open(image_path)
+#         self.img2 = self.img2.resize((500, 130), Image.LANCZOS)
+#         self.photoimg2 = ImageTk.PhotoImage(self.img2)
+
+#         self.img3 = Image.open(image_path)
+#         self.img3 = self.img3.resize((500, 130), Image.LANCZOS)
+#         self.photoimg3 = ImageTk.PhotoImage(self.img3)
+
+#         # Background image
+#         self.bg_image = Image.open(image_path)
+#         self.bg_image = self.bg_image.resize((1530, 790), Image.LANCZOS)
+#         self.photo_bg = ImageTk.PhotoImage(self.bg_image)
+
+#         # Button images
+#         self.img4 = Image.open("./images/students.jpg")
+#         self.img4 = self.img4.resize((220, 220), Image.LANCZOS)
+#         self.photoimg4 = ImageTk.PhotoImage(self.img4)
+
+#         self.img5 = Image.open("./images/face.jpg")
+#         self.img5 = self.img5.resize((220, 220), Image.LANCZOS)
+#         self.photoimg5 = ImageTk.PhotoImage(self.img5)
+
+#         self.img6 = Image.open("./images/attendance.jpg")
+#         self.img6 = self.img6.resize((220, 220), Image.LANCZOS)
+#         self.photoimg6 = ImageTk.PhotoImage(self.img6)
+
+#         self.img7 = Image.open("./images/help.jpg")
+#         self.img7 = self.img7.resize((220, 220), Image.LANCZOS)
+#         self.photoimg7 = ImageTk.PhotoImage(self.img7)
+
+#         self.img8 = Image.open("./images/ai.jpg")
+#         self.img8 = self.img8.resize((220, 220), Image.LANCZOS)
+#         self.photoimg8 = ImageTk.PhotoImage(self.img8)
+
+#         self.img9 = Image.open("./images/photos.jpg")
+#         self.img9 = self.img9.resize((220, 220), Image.LANCZOS)
+#         self.photoimg9 = ImageTk.PhotoImage(self.img9)
+
+#         self.img10 = Image.open("./images/developers.jpg")
+#         self.img10 = self.img10.resize((220, 220), Image.LANCZOS)
+#         self.photoimg10 = ImageTk.PhotoImage(self.img10)
+
+#         self.img11 = Image.open("./images/exit.jpg")
+#         self.img11 = self.img11.resize((220, 220), Image.LANCZOS)
+#         self.photoimg11 = ImageTk.PhotoImage(self.img11)
+
+#     def setup_ui(self):
+#         # Top images
+#         Label(self.root, image=self.photoimg1).place(x=0, y=0, width=500, height=130)
+#         Label(self.root, image=self.photoimg2).place(x=500, y=0, width=500, height=130)
+#         Label(self.root, image=self.photoimg3).place(x=1000, y=0, width=530, height=130)
+
+#         # Background image
+#         background_label = Label(self.root, image=self.photo_bg)
+#         background_label.place(x=0, y=0, width=1530, height=790)
+
+#         # Title label
+#         title_lbl = Label(background_label, text="FACE RECOGNITION ATTENDANCE SYSTEM SOFTWARE", font=("Times New Roman", 35, "bold"), bg="white", fg="red")
+#         title_lbl.place(x=0, y=0, width=1530, height=45)
+
+#         # Students Button
+#         self.create_button(background_label, self.photoimg4, "Student Details", 200, 100)
+
+#         # Detect Face Button
+#         self.create_button(background_label, self.photoimg5, "Face Detector", 500, 100)
+
+#         # Attendance Button
+#         self.create_button(background_label, self.photoimg6, "Attendance", 800, 100)
+
+#         # Help Button
+#         self.create_button(background_label, self.photoimg7, "Help Menu", 1100, 100)
+
+#         # Train Model Button
+#         self.create_button(background_label, self.photoimg8, "Train Model", 200, 380)
+
+#         # Photos Button
+#         self.create_button(background_label, self.photoimg9, "Photos", 500, 380)
+
+#         # Developers Button
+#         self.create_button(background_label, self.photoimg10, "Developers", 800, 380)
+
+#         # Exit Button
+#         self.create_button(background_label, self.photoimg11, "Exit", 1100, 380)
+
+#     def create_button(self, parent, image, text, x, y):
+#         # Button with image
+#         button = Button(parent, image=image,command=self.student_details, cursor="hand2")
+#         button.place(x=x, y=y, width=220, height=220)
+
+#         # Button with text
+#         button_text = Button(parent, text=text, cursor="hand2", font=("Times New Roman", 15, "bold"), bg="darkblue", fg="red", command=self.student_details)
+#         button_text.place(x=x, y=y + 220, width=220, height=40)
+        
+#         def open_img(self):
+#             os.startfile("data")
+            
+  
+#     # ====function for buttons====
+
+#     def student_details(self):
+#         self.new_window=Toplevel(self.root)
+#         self.app=Student(self.new_window)
+
+
+
+
+
+# if __name__ == "__main__":
+#     root = Tk()
+#     app = Face_Recognition_System(root)
+#     root.mainloop()
+
+                    
